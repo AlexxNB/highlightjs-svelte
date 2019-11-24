@@ -5,7 +5,6 @@ Author: Alexey Schebelev
 Description: Components of Svelte Framework
 */
 
-let module = module ? module : {};
 
 function hljsDefineSvelte(hljs) {
   return {
