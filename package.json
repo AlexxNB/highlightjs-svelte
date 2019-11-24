@@ -34,5 +34,8 @@
     "url": "https://github.com/AlexxNB/highlightjs-svelte/issues"
   },
   "homepage": "https://github.com/AlexxNB/highlightjs-svelte#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
 }
