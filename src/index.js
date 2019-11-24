@@ -1,3 +1,12 @@
+/*
+Language: Svelte.js
+Requires: xml.js, javascript.js, css.js
+Author: Alexey Schebelev
+Description: Components of Svelte Framework
+*/
+
+let module = module ? module : {};
+
 function hljsDefineSvelte(hljs) {
   return {
     subLanguage: "xml",
