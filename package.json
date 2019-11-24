@@ -1,0 +1,33 @@
+{
+  "name": "highlightjs-svelte",
+  "version": "1.0.0",
+  "description": "Svelte language definition for Highlight.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "node ./test/runtest.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "highlight.js": "^9.16.2",
+    "rollup": "^1.27.4",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexxNB/highlightjs-svelte.git"
+  },
+  "keywords": [
+    "highlight.js",
+    "svelte",
+    "hljs"
+  ],
+  "author": "Alexey Schebelev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexxNB/highlightjs-svelte/issues"
+  },
+  "homepage": "https://github.com/AlexxNB/highlightjs-svelte#readme"
+}

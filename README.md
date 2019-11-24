@@ -1,2 +1,2 @@
-# highlightjs-svelte
-Svelte Language Definition for Highlight.js
+# hljs-svelte-lang
+Svelte language definition for Highlight.js
