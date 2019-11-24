@@ -7,13 +7,17 @@
   "scripts": {
     "build": "rollup -c",
     "pretest": "npm run build",
-    "test": "node ./test/runtest.js",
+    "test": "node tests/test.js | tap-diff",
+    "test-update": "node tests/test.js update | tap-diff",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "fs-extra": "^8.1.0",
     "highlight.js": "^9.16.2",
     "rollup": "^1.27.4",
-    "rollup-plugin-terser": "^5.1.2"
+    "rollup-plugin-terser": "^5.1.2",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.11.0"
   },
   "repository": {
     "type": "git",
@@ -29,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/AlexxNB/highlightjs-svelte/issues"
   },
-  "homepage": "https://github.com/AlexxNB/highlightjs-svelte#readme"
+  "homepage": "https://github.com/AlexxNB/highlightjs-svelte#readme",
+  "dependencies": {}
 }
