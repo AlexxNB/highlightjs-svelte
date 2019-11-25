@@ -1,6 +1,6 @@
 {
   "name": "highlightjs-svelte",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Svelte language definition for Highlight.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
