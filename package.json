@@ -12,6 +12,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "diff": "^4.0.1",
     "fs-extra": "^8.1.0",
     "highlight.js": "^9.16.2",
     "rollup": "^1.27.4",
