@@ -1,0 +1,16 @@
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">let</span> list = [<span class="hljs-string">'item1'</span>,<span class="hljs-string">'item2'</span>,<span class="hljs-string">`item<span class="hljs-subst">${<span class="hljs-number">3</span>}</span>`</span>,<span class="hljs-number">4</span>];
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">let</span> name = <span class="hljs-string">'World'</span>;
+</span><span class="hljs-keyword">  $: </span><span class="javascript">num = list.length;
+</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, </span><span class="javascript">{name}</span><span class="xml">!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</span><span class="javascript">{</span><span class="hljs-keyword">#each</span><span class="javascript"> list <span class="hljs-keyword">as</span> item}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="javascript">{ <span class="hljs-keyword">typeof</span> item === <span class="hljs-string">'str`===ing?'</span> ? item.toUpperCase() : item}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="javascript">{</span><span class="hljs-keyword">:else</span><span class="javascript">}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>No items...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="javascript">{</span><span class="hljs-keyword">/each</span><span class="javascript">}</span><span class="xml">
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><span class="css">
+  <span class="hljs-selector-tag">h1</span>{<span class="hljs-attribute">color</span>:red;}
+</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span>

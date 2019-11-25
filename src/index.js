@@ -5,7 +5,6 @@ Author: Alexey Schebelev
 Description: Components of Svelte Framework
 */
 
-
 function hljsDefineSvelte(hljs) {
   return {
     subLanguage: "xml",
@@ -22,6 +21,7 @@ function hljsDefineSvelte(hljs) {
         contains:[
           { 
             begin: /^(\s*)(\$:)/gm,
+            end: /(\s*)/gm,
             className: 'keyword'
           }
         ]
@@ -39,13 +39,14 @@ function hljsDefineSvelte(hljs) {
         subLanguage: "javascript",
         contains:[
           {
-            begin: /\{/, 
-            end: /\}/, 
+            begin: /[\{]/, 
+            end: /[\}]/, 
             skip: true
           },
           {
             begin: /([#:\/@])(if|else|each|await|then|catch|debug|html)/gm,
-            className:'keyword'
+            className:'keyword',
+            relevance: 10,
           }
         ],
       }
