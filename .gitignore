@@ -2,3 +2,4 @@ dist/index.*
 node_modules
 bundle*
 tests/visual
+tests/browser
