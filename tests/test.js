@@ -1,6 +1,7 @@
 const command = process.argv[2];
 
 const {getSnaplist} = require('./helpers/snapshots');
+const {createBrowserTest} = require('./helpers/browser');
 const {createVisualTest} = require('./helpers/visual');
 const {doTesting} = require('./helpers/testing');
 
@@ -16,6 +17,7 @@ function handleSource(source){
 
 
 const snaplist = getSnaplist(handleSource,(command === 'update'));
+createBrowserTest(snaplist);
 createVisualTest(snaplist);
 doTesting(snaplist);
 

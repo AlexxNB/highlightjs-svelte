@@ -1,10 +1,13 @@
-const { terser } = require("rollup-plugin-terser");
+import { terser } from "rollup-plugin-terser";
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+
 const pkg = require('./package.json');
 
-export default {
+export default [{
     input: 'src/index.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
+      { file: pkg.main, format: 'cjs', exports: 'default' },
       { file: pkg.module, format: 'es' }
     ],
     external: [
@@ -12,4 +15,15 @@ export default {
       ...Object.keys(pkg.peerDependencies || {}),
     ],
     plugins: [terser()]
-  };
+  },
+  {
+      input: 'src/browser.js',
+      output:{ 
+          file: pkg.browser, 
+          name: 'svelte',
+          format: 'iife' 
+      },
+      external: false,
+      plugins: [resolve(),commonjs(),terser()]
+  }
+]

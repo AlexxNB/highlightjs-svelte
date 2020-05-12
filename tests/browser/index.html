@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Browser Test page</title>
+            <link rel="stylesheet" href="/home/alexxnb/Projects/Svelte/highlightjs-svelte/node_modules/highlight.js/styles/rainbow.css">
+        </head>
+        <script src="/home/alexxnb/Projects/Svelte/highlightjs-svelte/node_modules/highlight.js/lib/highlight.js"></script>
+        <script src="/home/alexxnb/Projects/Svelte/highlightjs-svelte/dist/svelte.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <body>
+            
+        <h1>1-simple-component</h1>
+        <pre><code class="svelte">&lt;script&gt;
+    export let name = 'world';
+&lt;/script&gt;
+
+&lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+
+&lt;style&gt;
+    h1{
+        color:red;
+    }
+&lt;/style&gt;</code></pre>
+        <hr />
+        
+        <h1>2-pngwn-example</h1>
+        <pre><code class="svelte">{#each array.map(({a, b, c}) =&gt; ({ a: a+1, b, c})) as {a, b, c} }
+    {name === undefined ? 'Anybody' : name}
+{/each}</code></pre>
+        <hr />
+        
+        <h1>3-most-common-component</h1>
+        <pre><code class="svelte">&lt;script&gt;
+  export let list = ['item1','item2',`item${3}`,4];
+  export let name = 'World';
+  $: num = list.length;
+&lt;/script&gt;
+
+&lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{#each list as item}
+  &lt;p&gt;{ typeof item === 'str`===ing?' ? item.toUpperCase() : item}&lt;/p&gt;
+{:else}
+  &lt;p&gt;No items...&lt;/p&gt;
+{/each}
+
+&lt;style&gt;
+  h1{color:red;}
+&lt;/style&gt;</code></pre>
+        <hr />
+        
+        <h1>4-js-testing</h1>
+        <pre><code class="svelte">&lt;script&gt;
+  function $initHighlight(block, cls) {
+    try {
+      if (cls.search(/\bno\-highlight\b/) != -1)
+        return process(block, true, 0x0F) +
+              ` class="${cls}"`;
+    } catch (e) {
+      /* handle exception */
+    }
+    for (var i = 0 / 2; i &lt; classes.length; i++) {
+      if (checkCondition(classes[i]) === undefined)
+        console.log('undefined');
+    }
+
+    return (
+      &lt;div&gt;
+        &lt;web-component&gt;{block}&lt;/web-component&gt;
+      &lt;/div&gt;
+    )
+  }
+
+  export  $initHighlight;
+&lt;/script&gt;</code></pre>
+        <hr />
+        
+        </body>
+    </html>
+    

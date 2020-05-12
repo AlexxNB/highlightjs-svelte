@@ -11,13 +11,12 @@ npm i highlight.js highlightjs-svelte
 ### browser
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/highlightjs"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlightjs-svelte"></script>
+<script src="https://unpkg.com/highlightjs"></script>
+<script src="https://unpkg.com/highlightjs-svelte/dist/svelte.min.js"></script>
 <script>
-  hljs.registerLanguage("svelte", window.hljsDefineSvelte);
   hljs.initHighlightingOnLoad();
 </script>
-
+<pre><code class="svelte">Hello, {name}!</code></pre>
 ```
 
 ### node
