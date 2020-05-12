@@ -4,7 +4,7 @@ var fs = require('fs-extra');
 const TESTS_DIR = path.resolve('tests');
 const HTML_FILE = path.join(TESTS_DIR,'browser','index.html');
 
-const HJS_FILE =  path.resolve(path.join('node_modules','highlight.js','lib','highlight.js'));
+const HJS_FILE = 'https://unpkg.com/highlightjs';
 const SVELTE_LANG_FILE =  path.resolve(path.join('dist','svelte.min.js'));
 const CSS_FILE =  path.resolve(path.join('node_modules','highlight.js','styles','rainbow.css'));
 
