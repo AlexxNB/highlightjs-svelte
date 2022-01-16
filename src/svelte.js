@@ -44,7 +44,7 @@ export function hljsDefineSvelte(hljs) {
             skip: true
           },
           {
-            begin: /([#:\/@])(if|else|each|await|then|catch|debug|html)/gm,
+            begin: /([#:\/@])(if|else|each|await|then|catch|debug|html|const)/gm,
             className:'keyword',
             relevance: 10,
           }
